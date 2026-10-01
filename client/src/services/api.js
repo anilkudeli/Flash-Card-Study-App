@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = "https://flash-card-study-app-backend.onrender.com";
 
 export async function request(path, options = {}) {
   const token = localStorage.getItem('recall-token');

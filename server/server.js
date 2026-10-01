@@ -8,7 +8,7 @@ import cardRoutes from './routes/cards.js';
 import { notFound, errorHandler } from './middleware/errors.js';
 
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 app.get('/api/health', (req, res) => res.json({ ok: true }));
 app.use('/api/auth', authRoutes);
